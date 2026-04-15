@@ -1,0 +1,57 @@
+/* 全局盒子模型 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 头部固定定位 + 浮动 */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+.logo { float: left; }
+.nav { float: right; list-style: none; }
+.nav li { display: inline; margin: 0 10px; cursor: pointer; }
+
+/* 三栏浮动 */
+.container {
+    margin-top: 80px;
+    overflow: hidden;
+}
+.left {
+    position: relative; /* 相对定位 */
+    float: left;
+    width: 20%;
+    background: #f5f5f5;
+    padding: 10px;
+}
+.middle {
+    position: relative; /* 父相 */
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+.right {
+    position: fixed; /* 固定定位 */
+    float: right;
+    width: 20%;
+    background: #ffeeee;
+    padding: 10px;
+}
+
+/* 绝对定位示例 */
+.book-item { position: relative; }
+.tip {
+    position: absolute; /* 子绝 */
+    top: 0;
+    background: red;
+    color: white;
+}
+
+/* 鼠标悬停显示隐藏 */
+.book-item:hover .tip { display: none; }
