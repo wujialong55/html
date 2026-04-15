@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 头部固定定位 + 浮动 */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: #2c3e50;
+    color: white;
+    line-height: 60px;
+    padding: 0 20px;
+    z-index: 999;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    height: 40px;
+    margin-top: 10px;
+}
+
+.nav {
+    float: right;
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.nav li:hover {
+    color: #f39c12;
+}
+
+/* 三栏浮动布局 */
+.container {
+    width: 1200px;
+    margin: 80px auto 0;
+    overflow: hidden;
+}
+
+.left {
+    position: relative; /* 相对定位 */
+    float: left;
+    width: 20%;
+    background: #f8f9fa;
+    padding: 20px;
+    min-height: 600px;
+}
+
+.middle {
+    position: relative; /* 父相 */
+    float: left;
+    width: 60%;
+    padding: 20px;
+}
+
+.right {
+    position: fixed; /* 固定定位 */
+    width: 20%;
+    right: 0;
+    top: 80px;
+    background: #fff5f5;
+    padding: 20px;
+    min-height: 400px;
+}
+
+/* 父相子绝 */
+.book-show {
+    position: relative;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.book-show img {
+    width: 100%;
+}
+
+.hot-tag {
+    position: absolute; /* 子绝 */
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+/* 鼠标悬停隐藏 */
+.book-show:hover .hot-tag {
+    display: none;
+}
+
+/* 浮动热门推荐 */
+.hot-list {
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.item {
+    float: left;
+    width: 30%;
+    height: 100px;
+    background: #eee;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* 表格 */
+.new-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.new-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
